@@ -8,7 +8,8 @@ import Footer from '../common/Footer';
 import { Link } from 'react-router-dom';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
 
 class Home extends Component {
@@ -50,6 +51,25 @@ class Home extends Component {
             <img src="/images/partner/7.png" alt="" onDragStart={this.handleOnDragStart} className="yours-custom-class" />,
             <img src="/images/partner/8.png" alt="" onDragStart={this.handleOnDragStart} className="yours-custom-class" />,
         ],
+
+    content : [
+	{
+		description:
+		'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
+		user: 'Luan Gjokaj',
+	},
+	{
+		description:
+		'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
+		user: 'Erich Behrens',
+	},
+	{
+		description:
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.',
+		user: 'Bruno Vizovskyy',
+	}
+]
+
      }
 
      carousel_responsive = {
@@ -131,7 +151,8 @@ class Home extends Component {
 
 
                     {/* How it work*/}
-                    <section className="section">
+                    <br/><br/>
+                    <section className="sections">
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-12">
@@ -267,78 +288,54 @@ class Home extends Component {
                     <br /><br />
 
                     {/*Testimonials*/}
-                    <section className="section">
-                        <div className="container">
+                    <section className="sections">
+                        <div className="container ">
                             <div className="row justify-content-center">
                                 <div className="col-12">
                                     <div className="section-titles text-center mb-4 pb-2">
-                                        <h4 className="title title-line pb-5">Our Success Stories</h4>
-                                        <p className="text-muted para-desc mx-auto mb-1">Post a job to tell us about your project. We'll quickly match you with the right freelancers.</p>
+                                        <h4 className="title title-line pb-5">Testimonials</h4>
+                                        <p className="text-muted para-desc mx-auto mb-1">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consecteturqui</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="row pt-4">
-                                <div className="col-lg-12">
-                                   
-                                        <div className="item testi-box rounded p-4 mr-3 ml-2 mb-4 bg-light position-relative">
-                                            <p className="text-muted mb-5">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consecteturqui adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
-                                            <div className="clearfix">
-                                                <div className="testi-img float-left mr-3">
-                                                    <img src="https://via.placeholder.com/400X400//88929f/5a6270C/O https://placeholder.com/" height="64" alt="" className="rounded-circle shadow"/>
-                                                </div>
-                                                <h5 className="f-18 pt-1">Kevin Stewart</h5>
-                                                <p className="text-muted mb-0">Web Designer at xyz Company</p>
-                                                <div className="testi-icon">
-                                                    <i className="mdi mdi-format-quote-open display-2"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div className="col-lg-1"></div>
+                                <div className="col-lg-10">
+                                <div id="owl-testi" class="owl-carousel owl-theme">
 
-                                        <div className="item testi-box rounded p-4 mr-3 ml-2 bg-light position-relative">
-                                            <p className="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-                                            <div className="clearfix">
-                                                <div className="testi-img float-left mr-3">
-                                                    <img src="https://via.placeholder.com/400X400//88929f/5a6270C/O https://placeholder.com/" height="64" alt="" className="rounded-circle shadow"/>
-                                                </div>
-                                                <h5 className="f-18 pt-1">Charles Garrett</h5>
-                                                <p className="text-muted mb-0">Marketing manager at abc Company</p>
-                                                <div className="testi-icon">
-                                                    <i className="mdi mdi-format-quote-open display-2"></i>
-                                                </div>
-                                            </div>
+                                <Slider 
+                                 responsive={this.carousel_responsive}
+                                        mouseDragEnabled={true} 
+                                        buttonDisabled={true}
+                                        autoplay={true}
+                                        duration={4000}
+                                        >
+                                {this.state.content.map((item, index) => <div key={index}>
+                                 <div className="item testi-box rounded p-4 mr-3 ml-2 mb-4 bg-light position-relative">
+                                    <div className="col-md-10">
+                                    <p>{item.description}</p>  
+                                     <div className="clearfix"><br/><br/>
+                                        <div className="testi-img float-left mr-3">
+                                             <img src="https://via.placeholder.com/400X400//88929f/5a6270C/O https://placeholder.com/" height="64" alt="" className="rounded-circle shadow"/>
                                         </div>
-
-                                        <div className="item testi-box rounded p-4 mr-3 ml-2 bg-light position-relative">
-                                            <p className="text-muted mb-5">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consecteturqui adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
-                                            <div className="clearfix">
-                                                <div className="testi-img float-left mr-3">
-                                                    <img src="https://via.placeholder.com/400X400//88929f/5a6270C/O https://placeholder.com/" height="64" alt="" className="rounded-circle shadow"/>
-                                                </div>
-                                                <h5 className="f-18 pt-1">Perry Martinez</h5>
-                                                <p className="text-muted mb-0">Marketing manager at abc Company</p>
-                                                <div className="testi-icon">
-                                                    <i className="mdi mdi-format-quote-open display-2"></i>
-                                                </div>
-                                            </div>
+                                        <h5 className="f-18 pt-1"><strong>{item.user}</strong></h5>
+                                        <br/><br/>
+                                     </div>       
+                                            
                                         </div>
-                                    
+                                         </div>
+                                         </div>
+                                    )}
+                                  
+                                </Slider>
+                            </div>
+                                      
 
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section className="testimonials">
-                        <div className="container text-center">
-                                <div className="row">
-                                    <div className="col-sm-12"><br /><br />
-                                        <h3 className="page-title">Testimonials!</h3>
-                                        <p className="sub-title">Fuga quidem corrupti perspiciatis nesciunt!</p><br/>
-                                    </div>
-                                </div>
-                        </div>
-                    </section>
-                    <br /><br />
 
                     <section className="gray">
                         <div className="container">
