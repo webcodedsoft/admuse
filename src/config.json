@@ -1,0 +1,5 @@
+{
+    "apiEndPoint": "https://test-server.hypedude.com/api",
+    "google_places_key":"AIzaSyCJCUgncsncFUVaWKvtXz-n1vdKCtix-xE",
+    "paystack_public_key":"pk_test_9a722de5d4a4274d566e3a744d64e7b51cb68162"
+}

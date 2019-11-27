@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="3186.726" height="1854.501" viewBox="0 0 3186.726 1854.501">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e9e4ec"/>
+      <stop offset="0.389" stop-color="#fefefe"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#463957"/>
+      <stop offset="1" stop-color="#786279"/>
+    </radialGradient>
+    <filter id="Subtraction_6" x="1881.067" y="0" width="1305.658" height="559.236" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49.5" result="blur"/>
+      <feFlood flood-opacity="0.188"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_187" data-name="Group 187" transform="translate(0 145.501)">
+    <rect id="Rectangle_784" data-name="Rectangle 784" width="3038" height="1709" fill="url(#linear-gradient)"/>
+    <g transform="matrix(1, 0, 0, 1, 0, -145.5)" filter="url(#Subtraction_6)">
+      <path id="Subtraction_6-2" data-name="Subtraction 6" d="M-2572.774,9827.235l-834.7-58.368a188.437,188.437,0,0,1-37.33-6.418,186.082,186.082,0,0,1-34.257-13.32,186.769,186.769,0,0,1-30.483-19.415,188.287,188.287,0,0,1-26.017-24.707,188.555,188.555,0,0,1-20.847-29.2,186.989,186.989,0,0,1-14.983-32.891,186.139,186.139,0,0,1-8.42-35.776,188.185,188.185,0,0,1-1.162-37.86l.3-4.279h1007.9v262.235h0Z" transform="translate(5611 -9419.5)" fill="url(#radial-gradient)"/>
+    </g>
+  </g>
+</svg>
