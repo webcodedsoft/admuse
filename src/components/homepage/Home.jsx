@@ -10,6 +10,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 
+
 class Home extends Component {
     state = { 
         searchFormData: {
@@ -62,83 +63,124 @@ class Home extends Component {
 
     render() { 
         return ( 
-                <div className="home">
-                    <section className="book-slot">
-                        <div className="container book-slot-content">
-                            <div className="row justify-content-center text-center">
-                                <div className="col-sm-10 mt-100"><br/>
-                                    <h3 className="l-title">Book media slots that reach your target<br /> <strong>audience</strong></h3>
-                                    <SearchForm history={this.props.history} searchFormData={this.state.searchFormData} />
+                 <div className="home">
+        <section className="bg-home" >
+            <div className="bg-overlay"></div>
+            <div className="home-center">
+            <div className="home-desc-center">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-lg-12">
+                            <div className="title-heading text-center text-white">
+                                <h1 className="small-title text-uppercase text-light mb-3">Book media slots that reach your target </h1>
+                                <h6 className="heading font-weight-bold mb-4"><strong>audience</strong></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home-form-position">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="home-registration-form p-4 mb-3">
+                                <SearchForm history={this.props.history} searchFormData={this.state.searchFormData} />
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+               
 
                     <section className="channels text-center">
                         <br /><br />
-                        <h3 className="page-title">Reach out to your targeted audience</h3>
-                        <p className="sub-title">Get to your target audience through any of these channels.</p>
+                        <div className="row justify-content-center">
+                            <div className="col-12">
+                                <div className="section-titles text-center mb-4 pb-2">
+                                    <h4 className="title title-line pb-5">Reach out to your targeted audience</h4>
+                                    <p className="text-muted para-desc mx-auto mb-1"><h5>Get to your target audience through any of these channels.</h5></p>
+                                </div>
+                            </div>
+                        </div>
 
                         <HomeChannels data={this.state.channels} />
                     </section>                    
 
-                    <section className="deals text-center"><br /><br />
-                        <h3 className="page-title">Checkout today's amazing deals</h3>
-                        <p className="sub-title">Get started quickly, checkout the amazing offers!</p><br/><br />
-    
+                    <br /><br />
+                    <section className="deals text-center bg-light"><br />
+                        <div className="section-titles text-center mb-5 pb-4">
+                            <h3 className="title title-line page-title pb-2">Checkout today's amazing deals</h3>
+                            <p className="sub-title"><h5>Get started quickly, checkout the amazing offers!</h5></p>
+                        </div>
                         <HomeDeals data={this.state.deals} />
                     </section>
 
-                    <section className="stats">
-                        <div className="container mt-100 text-center">
-                            <div className="row">
-                                <div className="col-sm-6">
-                                    <img src="/images/stock/happy-cust.jpg" className="img img-fluid" alt=""/>
+                     {/* Stat*/}
+                     <br /><br />
+                     <div className="section-titles text-center">
+                            <h3 className="title title-line page-title">We backup facts with figures</h3>
+                        </div>
+                    <section className="section bg-counter position-relative stat-image">
+                        <div className="bg-overlay bg-overlay-gradient"></div>
+
+                                <Stats stats={this.state.stats} />
+                           
+                    </section>
+
+
+                    {/* How it work*/}
+                    <section className="section">
+                        <div className="container">
+                            <div className="row justify-content-center">
+                                <div className="col-12">
+                                    <div className="section-titles text-center mb-4 pb-2">
+                                        <h4 className="title title-line pb-5">How it works!</h4>
+                                        <p className="text-muted para-desc mx-auto mb-1"><h5>You can get started in 3 simple steps.</h5></p>
+                                    </div>
                                 </div>
-                                <div className="col-sm-6"><br />
-                                    <h3 className="l-title">We backup facts with figures</h3>
-                                    <Stats stats={this.state.stats} />
+                            </div>
+                            <div className="row">
+                                <div className="col-md-4 mt-4 pt-2">
+                                    <div className="how-it-work-box bg-light p-4 text-center rounded shadow">
+                                        <div className="how-it-work-img position-relative rounded-pill mb-3">
+                                            <img src="images/how-it-work/img-1.png" alt="" className="mx-auto d-block" height="50"/>
+                                        </div>
+                                        <div>
+                                            <h5>Find Slots</h5>
+                                            <p className="text-muted">Donec pede justo fringilla vel aliquet nec vulputate eget arcu. In enim justo rhoncus ut a, justo.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4 mt-4 pt-2">
+                                    <div className="how-it-work-box bg-light p-4 text-center rounded shadow">
+                                        <div className="how-it-work-img position-relative rounded-pill mb-3">
+                                            <img src="images/how-it-work/img-2.png" alt="" className="mx-auto d-block" height="50"/>
+                                        </div>
+                                        <div>
+                                            <h5>Review Listing</h5>
+                                            <p className="text-muted">Aliquam lorem ante dapibus in, viverra feugiatquis a tellus. Phasellus viverra nulla ut Quisque rutrum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-4 mt-4 pt-2">
+                                    <div className="how-it-work-box bg-light p-4 text-center rounded shadow">
+                                        <div className="how-it-work-img position-relative rounded-pill mb-3">
+                                            <img src="images/how-it-work/img-3.png" alt="" className="mx-auto d-block" height="50"/>
+                                        </div>
+                                        <div>
+                                            <h5>Book Slot</h5>
+                                            <p className="text-muted">Nullam dictum felis eu pede mollis pretiumetus Integer tincidunt. Cras dapibus. semper nisi.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+                    
 
-                    <section className="how">
-                        <div className="container text-center">
-                            <div className="row">
-                                <div className="col-sm-12"><br /><br />
-                                    <h3 className="page-title">How it works!</h3>
-                                    <p className="sub-title">You can get started in 3 simple steps.</p><br/>
-                                </div>
-
-                                <div className="col-sm-4">
-                                    <div className="box">
-                                        <img src="/images/search-online.svg" className="img-fluid" alt=""/>
-                                        <h4>Find Slots</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ex laborum tempore ullam, quas eum nihil dolorum dicta.</p>
-                                    </div>
-                                </div>
-                                <div className="col-sm-4">
-                                    <div className="box">
-                                        <img src="/images/search-online.svg" className="img-fluid" alt=""/>
-                                        <h4>Review Listing</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ex laborum tempore ullam, quas eum nihil dolorum dicta.</p>
-                                    </div>
-                                </div>
-                                <div className="col-sm-4">
-                                    <div className="box">
-                                        <img src="/images/search-online.svg" className="img-fluid" alt=""/>
-                                        <h4>Book Slot</h4>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ex laborum tempore ullam, dolores laboriosam tempora nisi</p>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </section>
-                    <br /><br />
-
+                    {/*Partners*/}
                     <section className="partners">
                         <div className="container text-center">
                                 <div className="row">
@@ -161,6 +203,7 @@ class Home extends Component {
                     </section>
                     <br /><br />
 
+                    {/*Blogs*/}
                     <section className="blogs">
                         <div className="container text-center">
                                 <div className="row">
@@ -222,6 +265,68 @@ class Home extends Component {
                         </div>
                     </section>
                     <br /><br />
+
+                    {/*Testimonials*/}
+                    <section className="section">
+                        <div className="container">
+                            <div className="row justify-content-center">
+                                <div className="col-12">
+                                    <div className="section-titles text-center mb-4 pb-2">
+                                        <h4 className="title title-line pb-5">Our Success Stories</h4>
+                                        <p className="text-muted para-desc mx-auto mb-1">Post a job to tell us about your project. We'll quickly match you with the right freelancers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row pt-4">
+                                <div className="col-lg-12">
+                                   
+                                        <div className="item testi-box rounded p-4 mr-3 ml-2 mb-4 bg-light position-relative">
+                                            <p className="text-muted mb-5">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consecteturqui adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
+                                            <div className="clearfix">
+                                                <div className="testi-img float-left mr-3">
+                                                    <img src="https://via.placeholder.com/400X400//88929f/5a6270C/O https://placeholder.com/" height="64" alt="" className="rounded-circle shadow"/>
+                                                </div>
+                                                <h5 className="f-18 pt-1">Kevin Stewart</h5>
+                                                <p className="text-muted mb-0">Web Designer at xyz Company</p>
+                                                <div className="testi-icon">
+                                                    <i className="mdi mdi-format-quote-open display-2"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="item testi-box rounded p-4 mr-3 ml-2 bg-light position-relative">
+                                            <p className="text-muted mb-5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+                                            <div className="clearfix">
+                                                <div className="testi-img float-left mr-3">
+                                                    <img src="https://via.placeholder.com/400X400//88929f/5a6270C/O https://placeholder.com/" height="64" alt="" className="rounded-circle shadow"/>
+                                                </div>
+                                                <h5 className="f-18 pt-1">Charles Garrett</h5>
+                                                <p className="text-muted mb-0">Marketing manager at abc Company</p>
+                                                <div className="testi-icon">
+                                                    <i className="mdi mdi-format-quote-open display-2"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="item testi-box rounded p-4 mr-3 ml-2 bg-light position-relative">
+                                            <p className="text-muted mb-5">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consecteturqui adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam</p>
+                                            <div className="clearfix">
+                                                <div className="testi-img float-left mr-3">
+                                                    <img src="https://via.placeholder.com/400X400//88929f/5a6270C/O https://placeholder.com/" height="64" alt="" className="rounded-circle shadow"/>
+                                                </div>
+                                                <h5 className="f-18 pt-1">Perry Martinez</h5>
+                                                <p className="text-muted mb-0">Marketing manager at abc Company</p>
+                                                <div className="testi-icon">
+                                                    <i className="mdi mdi-format-quote-open display-2"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <section className="testimonials">
                         <div className="container text-center">

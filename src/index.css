@@ -28,6 +28,8 @@ a:hover{ color: rgb(110, 90, 128); }
   background: url('/images/stock/hero-image.jpg') no-repeat center; background-size: cover; color:#fff;
   min-height: 500px; position: relative;
 }
+
+
 .book-slot::before{
   background: rgba(0,0,0,0.6); width:100%; height: 100%; top:0; left:0; content: " "; position: absolute; z-index: 1;
 }
@@ -48,6 +50,7 @@ padding: 20px 10px }
 .stats-div .stat-item:nth-child(4){  border:none; }
 .stats-div .stat-item:nth-child(2){ border-right:none; }
 .stats-div .stat-item:nth-child(3){ border-bottom:none; }
+
 
 .page-title{
   font-size: 34px; color:#656; line-height: 70px;
@@ -124,7 +127,7 @@ min-height: 170px; display: block; padding: 20px; text-align: center; border-rad
 }
 .footer{
   background: rgb(69,54,83);
-  min-height: 300px;
+  /*min-height: 300px;*/
   color: #fff; padding: 4% 0;
 }
 .footer a{color:#fff;}
@@ -179,7 +182,7 @@ div[data-test="datatable-input"] .form-control{
 .white-bg{ background: #fff; padding: 10px; border-radius: 5px; margin: 15px; box-shadow: 1px 1px 8px rgba(100, 100, 100, 0.2); }
 .multi-select button{ width: 100%;border:1px solid #ddd; min-height: 40px; box-shadow: none; border-radius: 5px; }
 .multi-select button span{ box-shadow: none !important; }
-.multi-select button + div{ color: rgb(69,54,83); text-align: left; background: #fff;position: absolute; z-index:999999 !important; }
+.multi-select button + div{width: 100%; color: rgb(69,54,83); text-align: left; background: #fff;position: absolute; z-index:999999 !important; }
 .details-table{  font-size: 13px; }
 .details-table tr td{ padding: 6.5px; }
 .details-table h5{font-weight: bold;}
@@ -231,4 +234,22 @@ div[data-test="datatable-input"] .form-control{
   .sidebar-toggler{
     display: block;
   }
+}
+
+
+
+
+/*
+New Stylesheet
+*/
+
+
+.bg-home {
+  background: url('/images/stock/hero-image.jpg') center center; background-size: cover; color:#fff;
+  min-height: 500px; position: relative;
+}
+
+.stat-image{
+    background: url('/images/stock/happy-cust.jpg') center center; background-size: cover; color:#fff;
+
 }

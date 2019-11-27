@@ -69,21 +69,28 @@ class SearchForm extends Form {
                 <Script url={`https://maps.googleapis.com/maps/api/js?key=${google_places_key}&libraries=places`}  
                         onLoad={this.handleScriptLoad}        
                 /><br />
-                <form onSubmit={this.handleSubmit}>
-                    <div className="row justify-content-center">
-                        <div className="form-group col-sm-4">
-                            {this.renderInput('location','Audience Location') }
+                 <form className="registration-form" onSubmit={this.handleSubmit}>
+                    <div className="row">
+                        <div className="col-lg-5 col-md-6">
+                            <div className="registration-form-box col-md-12">
+                                
+                                    {this.renderInput('location','Audience Location') }
+                                </div>
                         </div>
-
-                        <div className="form-group col-sm-4">
-                            {this.renderMultiSelect('social_class','Social Class',this.state.social_class, this.handleMultiSelectValueChange) }
+                        <div className="col-lg-5 col-md-6">
+                            <div className="registration-form-box">
+                                
+                                {this.renderMultiSelect('social_class','Social Class',this.state.social_class, this.handleMultiSelectValueChange) }
+                            </div>
                         </div>
-                        <div className="form-group col-sm-1" style={{marginTop:'-5px'}}>
-                            {this.renderButton('  Search  ')}
+                        
+                        <div className="col-lg-2 col-md-6">
+                            <div className="registration-form-box">
+                                {this.renderButton('  Search  ')}
+                                </div>
                         </div>
                     </div>
                 </form>
-                
             </div>
          );
     }
