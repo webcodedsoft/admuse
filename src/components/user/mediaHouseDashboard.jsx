@@ -3,9 +3,15 @@ import { MDBDataTable } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import Dashboard from '../common/dashboard';
 // import { Calendar } from 'react-big-calendar';
+import { Calendar } from 'react-calendar-component';
+import moment from 'moment';
+import 'moment/locale/nb';
+
 
 class MediaHouseDashboard extends Component {
     state = { 
+         date: moment(),
+
         bookings:{
             columns : [
                 {label: 'Slot',field: 'slot',sort: 'asc',width:180},
@@ -26,13 +32,13 @@ class MediaHouseDashboard extends Component {
                  comment: 'Scheduled',
                  ad_executive: 'NA',
                  action: <div className="col-sm-12" style={{textAlign:'center' }}>
-                            <Link to="#" className="btn abtn abtn-2">Approve</Link> &nbsp;&nbsp;&nbsp;&nbsp;
-                            <Link to="#" className="btn abtn abtn-2">Decline</Link>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <Link to="#" className="btn abtn abtn-2">Reschedule</Link>
+                            <Link to="#" className="btn abtn">Approve</Link> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <Link to="#" className="btn abtn">Decline</Link>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <Link to="#" className="btn abtn">Reschedule</Link>
                             </div>,
                            
                  publication_status: <div className="col-sm-12" style={{textAlign:'center' }}>
-                            <Link to="#" className="btn abtn abtn-2">Mark as Published</Link> 
+                            <Link to="#" className="btn abtn">Mark as Published</Link> 
                             </div>,
             
                 },
@@ -97,7 +103,7 @@ class MediaHouseDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-4">
-                                            <Link to="/bookings/manage">
+                                            <Link to="/user/bookings">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-clock"></i>
                                                     <h4>Booked vs Scheduled</h4>
@@ -139,6 +145,11 @@ class MediaHouseDashboard extends Component {
                                 </div>
                                 <div className="col-sm-5">
                                     <h4>Calendar</h4>
+                                     <Calendar
+                                        onChangeMonth={date => this.setState({ date })}
+                                        date={this.state.date}
+                                        onPickDate={date => console.log(date)}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -147,9 +158,9 @@ class MediaHouseDashboard extends Component {
                             <br />
                             <Link to="/bids/manage" className="btn abtn abtn-2">Review Bid</Link>
                             <Link to="/wizard/share-rate/select/media-house" className="btn abtn abtn-2">Share Rate Card</Link>
-                            <Link to="/wizard/program/select/media-house" className="btn abtn abtn-2">Create New Programme</Link>
-                            <Link to="/wizard/slot/select/media-house" className="btn abtn abtn-2">Create New Slot</Link> 
-                            <Link to="/user/profile" className="btn abtn abtn-2">Profile</Link>
+                            <Link to="/media-house/faaji-lawal/program/create" className="btn abtn abtn-2">Create New Programme</Link>
+                            <Link to="/media-house/faaji-lawal/program/time-na-money/slot/create" className="btn abtn abtn-2">Create New Slot</Link> 
+                            <Link to="/user/account" className="btn abtn abtn-2">Profile</Link>
                         </div>
                         <h4>Recent Bookings</h4>
                         <div className="table-responsive">

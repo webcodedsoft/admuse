@@ -34,28 +34,30 @@ class NavBarStyleOne extends Component {
 		let dashboardLink = '/media-house/dashboard';
 		let bid_link = "";
 		let wishList_Lisk = "";
-		/*let currentpath = "";
+		let currentpath = "";
 		let hostpath = "";
 
 		currentpath = window.location.href;
-		hostpath = window.location.host;*/
+		hostpath = window.location.host;
 		
-
 		if(user && user.type === "administrator") {
 
 			mediaHouseLink = <li className="nav-item">
 								<NavLink className="nav-link" to="/media-house">Media Houses</NavLink>
 							 </li>;
+		}
 
-		/*if(currentpath === 'http://'+hostpath+'/')
-		{
-				
-		}*/
+		if(user && user.type === "publisher") {
 
-			
+			if(currentpath === 'http://'+hostpath+'/')
+			{
+				mediaHouseLink = <li className="nav-item">
+								<NavLink className="nav-link" to="/media-house">Media Houses</NavLink>
+							 </li>;	
+			}
 
 			dashboardLink = '/media-house/dashboard';
-			
+			booking_history = '/user/bookings';
 		} else {
 			mediaHouseLink = <li className="nav-item"></li>;
 			dashboardLink = '/campaigns-dashboard';

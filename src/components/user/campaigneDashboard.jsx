@@ -179,7 +179,7 @@ class CampaigneDashboard extends Component {
 
                         <div className="offset-6 col-sm-6" style={{ textAlign: 'right'}}>
                             <br />
-                            <button className="btn abtn abtn-2">Create Campaign</button>
+                            <Link to="/media-house/slot/list" className="btn abtn abtn-2">Buy Slots </Link>
                         </div>
                         <br/>
                         

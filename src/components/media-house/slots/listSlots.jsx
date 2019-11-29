@@ -116,7 +116,7 @@ class ListSlots extends ProgramFormUtils {
                                 </div>
 
                                 <div className="offset-9 col-sm-3">
-                                    <Link to={`#`} className="btn abtn abtn-2 btn-block" style={{padding: '10px' }}>Refine Search</Link>
+                                    <Link to={`#`} className="btn abtn abtn-2" style={{padding: '10px' }}>Refine Search</Link>
                                 </div>
                             </div>
                             <hr /><br/><br/>

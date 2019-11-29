@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import { Link } from 'react-router-dom';
-import FrontPage from '../common/frontPage';
+import Dashboard from './../common/dashboard';
 import { getBookings } from './../../services/cartService';
 
 class Bookings extends Component {
@@ -20,7 +20,7 @@ class Bookings extends Component {
               ],
             rows: [
                 {item: "60 Seconds Sunrise Daily", 
-                 material: <Link to='/'>Click to view</Link>, 
+                 material: <Link to={`/media-house/edit/1`}>Click to view</Link>, 
                  amount: 20000, 
                  schedule: '01.09.2019', 
                  approval_status: 'Approval', 
@@ -50,7 +50,7 @@ class Bookings extends Component {
     render() { 
         const {bookings} = this.state;
         return ( 
-            <FrontPage>
+            <Dashboard>
                 <div className="container mt-150">
                         <h3 className="section-title">My Bookings</h3>
                         <MDBDataTable scrollX striped bordered hover
@@ -58,11 +58,11 @@ class Bookings extends Component {
                                             paging={true} />
                     <div className="row">
                         <div className="offset-10 col-sm-2">
-                            <Link to="/" className="btn abtn abtn-2 btn-block">Go Back</Link>
+                            <Link to="/" className="btn abtn abtn-2 ">Go Back</Link>
                         </div>
                     </div>
                 </div>
-            </FrontPage>
+            </Dashboard>
          );
     }
 }

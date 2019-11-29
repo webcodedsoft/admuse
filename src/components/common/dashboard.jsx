@@ -41,6 +41,7 @@ class Dashboard extends Component {
     render() {
         const {children} = this.props;
         const {user} = this.state;
+    
         return ( 
             <React.Fragment>
                 <ToastContainer />
@@ -59,19 +60,20 @@ class Dashboard extends Component {
                                             
                                             
                                             
-                                            { user.type !== "advertiser" 
-                                             && 
+                                            { user.type !== "advertiser" && 
                                              <React.Fragment>
                                                  <li><Link className="nav-link" to="/media-house/dashboard"><i className="fas fa-clock"></i> &nbsp; Dashboard</Link></li>
                                                  <li><Link className="nav-link" to="/all-programs"><i className="fas fa-tv"></i> &nbsp; All Programs</Link></li>
                                                  <li><Link className="nav-link" to="/slots/all"><i className="fas fa-box"></i> &nbsp; All Slots</Link></li>
                                                  <li><Link className="nav-link" to="/all-data"><i className="fas fa-list"></i> &nbsp; All Data</Link></li>
+                                                 <li><Link className="nav-link" to="/user/bookings"><i className="fas fa-book"></i> &nbsp; Bookings</Link></li>
                                             </React.Fragment>
                                              }
                                             { user.type === "advertiser" && 
                                              <React.Fragment>
                                              <li><Link className="nav-link" to="/campaigns-dashboard"><i className="fas fa-tv"></i> &nbsp; Dashboard</Link></li>
                                              <li><Link className="nav-link" to="/all-data"><i className="fas fa-list"></i> &nbsp; All Data</Link></li>
+                                             <li><Link className="nav-link" to="/bookings/manage"><i className="fas fa-book"></i> &nbsp; Bookings</Link></li>
                                              </React.Fragment>
                                             }
                                             
@@ -91,7 +93,7 @@ class Dashboard extends Component {
                                                     <li><Link className="nav-link" to="/contacts"><i className="fas fa-check"></i> &nbsp; Contacts</Link></li>
                                                 </ul>
                                             </li>}
-                                            <li><Link className="nav-link" to="/bookings/manage"><i className="fas fa-book"></i> &nbsp; Bookings</Link></li>
+                                            
                                             { user.type === "administrator" && <li><Link className="nav-link" to="/users"><i className="fas fa-users"></i> &nbsp; Manage Users</Link></li>}
                                             <li><Link className="nav-link" to="/logout"><i className="fas fa-arrow-left"></i> &nbsp; Logout</Link></li>
                                         </ul>

@@ -122,219 +122,6 @@ File: main stylesheet
   font-size: 20px;
 }
 
-.btn {
-  padding: 8px 20px;
-  outline: none;
-  text-decoration: none;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  font-weight: 600;
-  border-radius: 10px;
-}
-
-.btn:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-
-.btn.btn-sm {
-  padding: 7px 16px;
-  font-size: 12px;
-}
-
-.btn.btn-lg {
-  padding: 14px 30px;
-  font-size: 16px;
-}
-
-.btn.searchbtn {
-  padding: 6px 20px;
-}
-
-.btn.btn-primary, .btn.btn-secondary, .btn.btn-success, .btn.btn-danger, .btn.btn-info, .btn.btn-warning, .btn.btn-dark {
-  color: #ffffff !important;
-}
-
-.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary.focus, .btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active, .btn.btn-secondary.active, .btn.btn-secondary.focus, .btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active, .btn.btn-success.active, .btn.btn-success.focus, .btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger.active, .btn.btn-danger.focus, .btn.btn-info:hover, .btn.btn-info:focus, .btn.btn-info:active, .btn.btn-info.active, .btn.btn-info.focus, .btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning.active, .btn.btn-warning.focus, .btn.btn-dark:hover, .btn.btn-dark:focus, .btn.btn-dark:active, .btn.btn-dark.active, .btn.btn-dark.focus {
-  color: #ffffff !important;
-}
-
-.btn.btn-primary-outline:hover, .btn.btn-primary-outline:focus, .btn.btn-primary-outline:active, .btn.btn-primary-outline.active, .btn.btn-primary-outline.focus, .btn.btn-secondary-outline:hover, .btn.btn-secondary-outline:focus, .btn.btn-secondary-outline:active, .btn.btn-secondary-outline.active, .btn.btn-secondary-outline.focus, .btn.btn-success-outline:hover, .btn.btn-success-outline:focus, .btn.btn-success-outline:active, .btn.btn-success-outline.active, .btn.btn-success-outline.focus, .btn.btn-danger-outline:hover, .btn.btn-danger-outline:focus, .btn.btn-danger-outline:active, .btn.btn-danger-outline.active, .btn.btn-danger-outline.focus, .btn.btn-info-outline:hover, .btn.btn-info-outline:focus, .btn.btn-info-outline:active, .btn.btn-info-outline.active, .btn.btn-info-outline.focus, .btn.btn-warning-outline:hover, .btn.btn-warning-outline:focus, .btn.btn-warning-outline:active, .btn.btn-warning-outline.active, .btn.btn-warning-outline.focus, .btn.btn-dark-outline:hover, .btn.btn-dark-outline:focus, .btn.btn-dark-outline:active, .btn.btn-dark-outline.active, .btn.btn-dark-outline.focus {
-  color: #ffffff !important;
-}
-
-.btn.btn-primary {
-  background: #2f55d4;
-  border: 1px solid #2f55d4;
-}
-
-.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary.focus {
-  background-color: #2443ac !important;
-}
-
-.btn.btn-primary-outline {
-  border: 1px solid #2f55d4;
-  color: #2f55d4;
-  background-color: transparent;
-}
-
-.btn.btn-primary-outline:hover, .btn.btn-primary-outline:focus, .btn.btn-primary-outline:active, .btn.btn-primary-outline.active, .btn.btn-primary-outline.focus {
-  background-color: #2f55d4;
-  border-color: #2f55d4;
-}
-
-.btn.btn-secondary {
-  background: #5a6d90;
-  border: 1px solid #5a6d90;
-}
-
-.btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active, .btn.btn-secondary.active, .btn.btn-secondary.focus {
-  background-color: #465571 !important;
-}
-
-.btn.btn-secondary-outline {
-  border: 1px solid #5a6d90;
-  color: #5a6d90;
-  background-color: transparent;
-}
-
-.btn.btn-secondary-outline:hover, .btn.btn-secondary-outline:focus, .btn.btn-secondary-outline:active, .btn.btn-secondary-outline.active, .btn.btn-secondary-outline.focus {
-  background-color: #5a6d90;
-  border-color: #5a6d90;
-}
-
-.btn.btn-success {
-  background: #2eca8b;
-  border: 1px solid #2eca8b;
-}
-
-.btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active, .btn.btn-success.active, .btn.btn-success.focus {
-  background-color: #25a06e !important;
-}
-
-.btn.btn-success-outline {
-  border: 1px solid #2eca8b;
-  color: #2eca8b;
-  background-color: transparent;
-}
-
-.btn.btn-success-outline:hover, .btn.btn-success-outline:focus, .btn.btn-success-outline:active, .btn.btn-success-outline.active, .btn.btn-success-outline.focus {
-  background-color: #2eca8b;
-  border-color: #2eca8b;
-}
-
-.btn.btn-danger {
-  background: #e43f52;
-  border: 1px solid #e43f52;
-}
-
-.btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger.active, .btn.btn-danger.focus {
-  background-color: #d21e32 !important;
-}
-
-.btn.btn-danger-outline {
-  border: 1px solid #e43f52;
-  color: #e43f52;
-  background-color: transparent;
-}
-
-.btn.btn-danger-outline:hover, .btn.btn-danger-outline:focus, .btn.btn-danger-outline:active, .btn.btn-danger-outline.active, .btn.btn-danger-outline.focus {
-  background-color: #e43f52;
-  border-color: #e43f52;
-}
-
-.btn.btn-info {
-  background: #9084e2;
-  border: 1px solid #9084e2;
-}
-
-.btn.btn-info:hover, .btn.btn-info:focus, .btn.btn-info:active, .btn.btn-info.active, .btn.btn-info.focus {
-  background-color: #6b5bd8 !important;
-}
-
-.btn.btn-info-outline {
-  border: 1px solid #9084e2;
-  color: #9084e2;
-  background-color: transparent;
-}
-
-.btn.btn-info-outline:hover, .btn.btn-info-outline:focus, .btn.btn-info-outline:active, .btn.btn-info-outline.active, .btn.btn-info-outline.focus {
-  background-color: #9084e2;
-  border-color: #9084e2;
-}
-
-.btn.btn-warning {
-  background: #f17425;
-  border: 1px solid #f17425;
-}
-
-.btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning.active, .btn.btn-warning.focus {
-  background-color: #d55b0e !important;
-}
-
-.btn.btn-warning-outline {
-  border: 1px solid #f17425;
-  color: #f17425;
-  background-color: transparent;
-}
-
-.btn.btn-warning-outline:hover, .btn.btn-warning-outline:focus, .btn.btn-warning-outline:active, .btn.btn-warning-outline.active, .btn.btn-warning-outline.focus {
-  background-color: #f17425;
-  border-color: #f17425;
-}
-
-.btn.btn-dark {
-  background: #3c4858;
-  border: 1px solid #3c4858;
-}
-
-.btn.btn-dark:hover, .btn.btn-dark:focus, .btn.btn-dark:active, .btn.btn-dark.active, .btn.btn-dark.focus {
-  background-color: #272f3a !important;
-}
-
-.btn.btn-dark-outline {
-  border: 1px solid #3c4858;
-  color: #3c4858;
-  background-color: transparent;
-}
-
-.btn.btn-dark-outline:hover, .btn.btn-dark-outline:focus, .btn.btn-dark-outline:active, .btn.btn-dark-outline.active, .btn.btn-dark-outline.focus {
-  background-color: #3c4858;
-  border-color: #3c4858;
-}
-
-.btn.btn-light {
-  color: #3c4858;
-  background: #f8f9fc;
-  border: 1px solid #dee2e6;
-}
-
-.btn.btn-light:hover, .btn.btn-light:focus, .btn.btn-light:active, .btn.btn-light.active, .btn.btn-light.focus {
-  background-color: #d4daed !important;
-  color: #3c4858;
-}
-
-.btn.btn-light-outline {
-  border: 1px solid #dee2e6;
-  color: #3c4858;
-  background-color: transparent;
-}
-
-.btn.btn-light-outline:hover, .btn.btn-light-outline:focus, .btn.btn-light-outline:active, .btn.btn-light-outline.active, .btn.btn-light-outline.focus {
-  background-color: #f8f9fc;
-}
-
-.form-control:disabled, .form-control[readonly] {
-  background-color: transparent;
-  opacity: 1;
-}
-
-button:not(:disabled) {
-  outline: none;
-}
-
 .shadow {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15) !important;
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.15) !important;
@@ -1855,11 +1642,6 @@ a.job-list[data-toggle=collapse].collapsed:before {
   width: 7px;
 }
 
-.apply-btn-sm {
-  padding: 6px 20px;
-  border-radius: 4px;
-}
-
 .job-list-box {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1918,10 +1700,6 @@ a.job-list[data-toggle=collapse].collapsed:before {
 /********************
     JOB SINGLE
 *********************/
-.job-time-btn {
-  border-radius: 50px;
-}
-
 .job-overview {
   padding: 24px 0 24px 24px;
 }
@@ -1940,9 +1718,6 @@ a.job-list[data-toggle=collapse].collapsed:before {
   .sort-button .list {
     right: 0;
     left: auto;
-  }
-  .job-list-btn-space {
-    margin: 12px 0;
   }
 }
 
