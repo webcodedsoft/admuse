@@ -3,9 +3,14 @@ import { MDBDataTable } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import Dashboard from './../common/dashboard';
 // import { Calendar } from 'react-big-calendar';
+import { Calendar } from 'react-calendar-component';
+import moment from 'moment';
+import 'moment/locale/nb';
 
 class CampaigneDashboard extends Component {
     state = { 
+        date: moment(),
+
         bookings:{
             columns : [
                 {label: 'Booking Name',field: 'booking_name',sort: 'asc',width:180},
@@ -164,6 +169,11 @@ class CampaigneDashboard extends Component {
                                 </div>
                                 <div className="col-sm-5">
                                     <h4>Calendar</h4>
+                                    <Calendar
+                                        onChangeMonth={date => this.setState({ date })}
+                                        date={this.state.date}
+                                        onPickDate={date => console.log(date)}
+                                    />
                                 </div>
                             </div>
                         </div>
