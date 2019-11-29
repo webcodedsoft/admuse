@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import Dashboard from '../common/dashboard';
-// import { Calendar } from 'react-big-calendar';
+
 import { Calendar } from 'react-calendar-component';
 import moment from 'moment';
 import 'moment/locale/nb';
