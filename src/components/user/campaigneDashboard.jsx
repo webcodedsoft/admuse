@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import Dashboard from './../common/dashboard';
-// import { Calendar } from 'react-big-calendar';
 import { Calendar } from 'react-calendar-component';
 import moment from 'moment';
 import 'moment/locale/nb';
@@ -11,7 +10,7 @@ class CampaigneDashboard extends Component {
     state = { 
         date: moment(),
 
-        bookings:{
+        bookings:{ 
             columns : [
                 {label: 'Booking Name',field: 'booking_name',sort: 'asc',width:180},
                 {label: 'Start - End Date',field: 'start_end_date',width:120},
