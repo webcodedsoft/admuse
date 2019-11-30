@@ -90,11 +90,11 @@ class SlotsAll extends Component {
                 <div className="white-bg">
                         <h2 className="section-title">All Slots</h2>
                         {/*striped bordered hover*/}
-                        <div className="table-responsive">
+                        
                             <MDBDataTable scrollX-250px responsive striped bordered hover
                                        data={this.state.data}
                                        paging={true} /> 
-                        </div>
+                        
                 </div>
                         <Link to={`/`} className="btn abtn abtn-2 pull-sm-right" style={{padding: '10px' }}>Go Back</Link>
                         

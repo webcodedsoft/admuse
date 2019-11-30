@@ -82,7 +82,7 @@ class CampaigneDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-3">
-                                            <Link to="/slots/all">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-box"></i>
                                                     <h4>25 Slots</h4>

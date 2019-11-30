@@ -36,7 +36,7 @@ class NavBarStyleOne extends Component {
 		let wishList_Lisk = "";
 		let currentpath = "";
 		let hostpath = "";
-
+ 
 		currentpath = window.location.href;
 		hostpath = window.location.host;
 		

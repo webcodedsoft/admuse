@@ -118,14 +118,16 @@ class MediaHouseDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-4">
+                                            <Link to="/user/bookings">
                                             <div className="item">
                                                 <i className="fas fa-2x fa-dollar-sign"></i>
                                                 <h4>N2500000 Sales</h4>
                                             </div>
+                                            </Link>
                                         </div>
 
                                         <div className="col-sm-4">
-                                            <Link to="/slot/all">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-box"></i>
                                                     <h4>30 Slots</h4>
@@ -185,7 +187,7 @@ class MediaHouseDashboard extends Component {
                         <MDBDataTable striped bordered hover
                                        data={this.state.data}
                                        paging={false} /> 
-                        <Link to={`/`} className="btn abtn abtn-2 pull-sm-right" style={{padding: '10px' }}>Go Back</Link>
+                        <Link to={`/media-house/dashboard`} className="btn abtn abtn-2 pull-sm-right" style={{padding: '10px' }}>Go Back</Link>
                         </div>
             </Dashboard>
          );

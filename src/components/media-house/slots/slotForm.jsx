@@ -110,13 +110,19 @@ class SlotForm extends Form {
                                         <h3 className="section-title">Create Slot</h3><br/>
                                         <div className="row">
                                             <div className="col-sm-6">
+                                                {this.renderSelect('programname', 'Program',[{key:1, value: 'Faaji Lawa'},{key:2, value: 'Time Na Money'},{key:3, value: 'Sport'}])}
+                                            </div>
+                                            <div className="col-sm-6">
+                                                {this.renderSelect('currency', 'Currency',[{key:1, value: 'Naira'},{key:2, value: 'Dollar'},{key:3, value: 'Pounds'}])}
+                                            </div>
+                                            <div className="col-sm-6">
                                                 {this.renderInput('name', 'Slot Name')}
                                             </div>
                                             <div className="col-sm-6">
                                                 {this.renderInput('price', 'Slot Price')}
                                             </div>
                                             <div className="col-sm-6">
-                                                {this.renderSelect('available', 'Available',[{key: 0, value:'No'},{key: 1, value:'Yes'}])}
+                                                {this.renderSelect('available', 'Select Available',[{key: 0, value:'Available'},{key: 1, value:'No'},{key: 2, value:'Yes'}])}
                                             </div>
                                             <div className="col-sm-6">
                                                 {this.renderSelect('type_id', 'Slot Type',this.state.types)}

@@ -20,7 +20,7 @@ const Footer = () => {
                         <li><a href="#" className="text-foot"><i className="fas fa-arrow-right"></i> Career</a></li>
                         <li><a href="#" className="text-foot"><i className="fas fa-arrow-right"></i> Blog</a></li>
                         <li><a href="#" className="text-foot"><i className="fas fa-arrow-right"></i> Pricing</a></li>
-                        <li><a href="#" className="text-foot"><i className="fas fa-arrow-right"></i> Marketing</a></li>
+                        <li><a href="/media-house/slot/choose" className="text-foot"><i className="fas fa-arrow-right"></i> Use our name your price tool</a></li>
                         
                     </ul>
                 </div>

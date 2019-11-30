@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MDBDataTable } from 'mdbreact';
 import { Link } from 'react-router-dom';
+import Form from './../common/form';
 import Dashboard from './../common/dashboard';
 import { getBookings } from './../../services/cartService';
 
@@ -44,18 +45,27 @@ class Bookings extends Component {
 
     async componentDidMount() {
        const { data } = await getBookings();
-       console.log(data);
+       //console.log(data);
     }
 
     render() { 
         const {bookings} = this.state;
+       
         return ( 
             <Dashboard>
                 <div className="container mt-150">
                         <h3 className="section-title">My Bookings</h3>
-                        <MDBDataTable scrollX striped bordered hover
+
+                <h5>Filter</h5>      
+                <select  className="form-control ad-input col-md-3">
+                    <option disabled selected>Choose Option...</option>
+                     <option value="paid" >Paid</option>
+                     <option value="unpaid" >Unpaid</option>
+                </select>
+                            <MDBDataTable scrollX-250px responsive striped bordered hover
                                             data={bookings}
                                             paging={true} />
+                       
                     <div className="row">
                         <div className="offset-10 col-sm-2">
                             <Link to="/" className="btn abtn abtn-2 ">Go Back</Link>

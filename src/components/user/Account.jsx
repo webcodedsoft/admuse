@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { getUser } from '../../services/userService';
 import Dashboard from './../common/dashboard';
 import Profile from './Profile';
+import { getCartSize } from '../../services/cartService';
 import BankDetailsForm from './BankDetailsForm';
 import FundWalletForm from './FundWalletForm';
+import { withRouter } from 'react-router-dom';
+
 
 class Account extends Component {
     state = { 
@@ -15,6 +18,7 @@ class Account extends Component {
         const response = await getUser();
         const { result: profile } = response.data;
         this.setState({ profile });
+        
     }
 
     toggle = tab => e => {
@@ -27,7 +31,18 @@ class Account extends Component {
 
     render() { 
         const { profile } = this.state;
+       
+        let toggle_link='';
+        
+       
+        if (profile.type === 'publisher') {
+		    toggle_link = <a className="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i className="fas fa-home"></i> &nbsp; Bank Details</a>;
+		} else {
+			toggle_link = <a className="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i className="fas fa-wallet"></i> &nbsp; My Wallet</a>;
+		}
+        
         return ( 
+            
             <Dashboard>
                 <div className="white-bg">
                             <h3 className="section-title">My Account</h3>
@@ -36,8 +51,7 @@ class Account extends Component {
                             <nav>
                             <div className="nav nav-tabs" id="nav-tab" role="tablist">
                                 <a className="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i className="fas fa-user"></i> &nbsp; Home</a>
-                                {/*<a className="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><i className="fas fa-home"></i> &nbsp; Bank Details</a> */}
-                                <a className="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><i className="fas fa-wallet"></i> &nbsp; My Wallet</a>
+                                { toggle_link }
                             </div>
                             </nav>
                             <div className="tab-content" id="nav-tabContent">
@@ -46,12 +60,13 @@ class Account extends Component {
                                         <Profile data={ profile } />
                                     </div>
                                 </div>
-                                {/*<div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                {<div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                     <div className="p-5">
                                         <h4 className="l-title">Bank Details</h4><br />
                                         <BankDetailsForm />
                                     </div>
-                                </div> */}
+                                </div> }
+
                                 <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                     <div className="p-5">
                                         <h4 className="l-title">&nbsp; Fund Wallet</h4> <br />
