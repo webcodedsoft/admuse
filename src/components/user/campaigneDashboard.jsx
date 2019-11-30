@@ -4,16 +4,19 @@ import { Link } from 'react-router-dom';
 import Dashboard from './../common/dashboard';
 /*import { Calendar } from 'react-calendar-component';
 import moment from 'moment';
-import 'moment/locale/nb';*/
-import CalendarMonthView from 'react-calendar-month-view';
+import 'moment/locale/nb';
+import CalendarMonthView from 'react-calendar-month-view';*/
+import Calendar from 'react-calendar';
+
 class CampaigneDashboard extends Component {
 
-    _renderDay = (date, isSmallCalendar) => {
+    /*_renderDay = (date, isSmallCalendar) => {
     // return a component to render for the given date
-  };
+  };*/
   
     state = { 
         //date: moment(),
+        date :  new Date(),
 
         bookings:{ 
             columns : [
@@ -177,8 +180,10 @@ class CampaigneDashboard extends Component {
                                         onChangeMonth={date => this.setState({ date })}
                                         date={this.state.date}
                                         onPickDate={date => console.log(date)}
-                                    />*/}
-                                    <CalendarMonthView renderDay={this._renderDay} />
+                                    /> <CalendarMonthView renderDay={this._renderDay} />*/}
+                                    <div className="col-md-12">
+                                        <Calendar onChange={this.onChange} value={this.state.date} />
+                                    </div>
                                 </div>
                             </div>
                         </div>
