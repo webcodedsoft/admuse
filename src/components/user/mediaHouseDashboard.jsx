@@ -3,14 +3,15 @@ import { MDBDataTable } from 'mdbreact';
 import { Link } from 'react-router-dom';
 import Dashboard from '../common/dashboard';
 
-import { Calendar } from 'react-calendar-component';
+/*import { Calendar } from 'react-calendar-component';
 import moment from 'moment';
-import 'moment/locale/nb';
+import 'moment/locale/nb';*/
+import CalendarMonthView from 'react-calendar-month-view';
 
 
 class MediaHouseDashboard extends Component {
     state = { 
-         date: moment(),
+         //date: moment(),
 
         bookings:{
             columns : [
@@ -145,11 +146,12 @@ class MediaHouseDashboard extends Component {
                                 </div>
                                 <div className="col-sm-5">
                                     <h4>Calendar</h4>
-                                     <Calendar
+                                     {/*<Calendar
                                         onChangeMonth={date => this.setState({ date })}
                                         date={this.state.date}
                                         onPickDate={date => console.log(date)}
-                                    />
+                                    />*/}
+                                    <CalendarMonthView renderDay={this._renderDay} />
                                 </div>
                             </div>
                         </div>
