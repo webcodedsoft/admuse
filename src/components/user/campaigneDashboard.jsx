@@ -66,7 +66,7 @@ class CampaigneDashboard extends Component {
                                     <div className="row">
                                         
                                         <div className="col-sm-3">
-                                            <Link to="/all-programs">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-tv"></i>
                                                     <h4>25 Programmes</h4>
@@ -82,7 +82,7 @@ class CampaigneDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-3">
-                                            <Link to="/materials">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-cogs"></i>
                                                     <h4>28 Materials</h4>
@@ -98,7 +98,7 @@ class CampaigneDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-3">
-                                            <Link to="/campaigns">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-clock"></i>
                                                     <h4>29 Running Campaigns</h4>
@@ -107,7 +107,7 @@ class CampaigneDashboard extends Component {
                                         </div>
 
                                         <div className="col-sm-3">
-                                            <Link to="/campaigns">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-clock"></i>
                                                     <h4>4 Scheduled</h4>
@@ -115,7 +115,7 @@ class CampaigneDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-3">
-                                            <Link to="/campaigns">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-bullhorn"></i>
                                                     <h4>10 Publisher</h4>
@@ -132,7 +132,7 @@ class CampaigneDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-3">
-                                            <Link to="/campaigns">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-times"></i>
                                                     <h4>30 Closed Campaigns</h4>
@@ -141,7 +141,7 @@ class CampaigneDashboard extends Component {
                                         </div>
                                         
                                         <div className="col-sm-3">
-                                            <Link to="/campaigns">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-stamp"></i>
                                                     <h4>20 Published</h4>
@@ -149,10 +149,10 @@ class CampaigneDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-3">
-                                            <Link to="/campaigns">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-ruler"></i>
-                                                    <h4>25in Audience Size</h4>
+                                                    <h4>25 in Audience Size</h4>
                                                 </div>
                                             </Link>
                                         </div>

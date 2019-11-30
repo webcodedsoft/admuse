@@ -26,7 +26,7 @@ class MediaHouseDashboard extends Component {
             rows: [
                 {item: "60 Seconds Sunrise Daily", 
                  slot: "Fullpage Ad on the Guardian",
-                 material: <Link to='/'>Click to view</Link>, 
+                 material: <Link to={`/media-house/edit/2`}>Click to view</Link>, 
                  amount: '20000', 
                  schedule: '01.09.2019', 
                  comment: 'Scheduled',
@@ -118,7 +118,7 @@ class MediaHouseDashboard extends Component {
                                         </div>
 
                                         <div className="col-sm-4">
-                                            <Link to="/slots/all">
+                                            <Link to="/slot/all">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-box"></i>
                                                     <h4>30 Slots</h4>
@@ -126,7 +126,7 @@ class MediaHouseDashboard extends Component {
                                             </Link>
                                         </div>
                                         <div className="col-sm-4">
-                                            <Link to="/campaigns">
+                                            <Link to="/all-data">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-bullhorn"></i>
                                                     <h4>60 Published Ads</h4>
