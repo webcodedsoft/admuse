@@ -127,7 +127,7 @@ class MediaHouseDashboard extends Component {
                                         </div>
 
                                         <div className="col-sm-4">
-                                            <Link to="/all-data">
+                                            <Link to="/slots/all">
                                                 <div className="item">
                                                     <i className="fas fa-2x fa-box"></i>
                                                     <h4>30 Slots</h4>

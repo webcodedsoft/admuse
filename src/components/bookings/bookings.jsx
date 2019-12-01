@@ -21,6 +21,7 @@ class Bookings extends Component {
               ],
             rows: [
                 {item: "60 Seconds Sunrise Daily", 
+                 slot: "Good Morning Nigeria",
                  material: <Link to={`/media-house/edit/1`}>Click to view</Link>, 
                  amount: 20000, 
                  schedule: '01.09.2019', 
@@ -31,6 +32,7 @@ class Bookings extends Component {
                 rating:<span><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i></span>},
 
                 {item: "60 Seconds on Radio Nigeria", 
+                slot: "God bless Nigeria",
                  material: <Link to={`/media-house/edit/1`}>Click to view</Link>, 
                  amount: 120000, 
                  schedule: '01.09.2019', 
