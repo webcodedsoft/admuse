@@ -23,6 +23,7 @@
     "react-calendar-month-view": "^0.7.0",
     "react-data-table-component": "^3.4.1",
     "react-dom": "^16.9.0",
+    "react-dropzone": "^10.2.1",
     "react-file-reader": "^1.1.4",
     "react-load-script": "0.0.6",
     "react-multiselect-checkboxes": "^0.1.1",

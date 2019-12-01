@@ -187,7 +187,9 @@ class MediaHouseDashboard extends Component {
                         <MDBDataTable striped bordered hover
                                        data={this.state.data}
                                        paging={false} /> 
-                        <Link to={`/media-house/dashboard`} className="btn abtn abtn-2 pull-sm-right" style={{padding: '10px' }}>Go Back</Link>
+                        
+                        <button onClick={this.props.history.goBack} className="btn abtn abtn-2">&laquo; Go Back</button>
+                        {/*<Link to={`/media-house/dashboard`} className="btn abtn abtn-2 pull-sm-right" style={{padding: '10px' }}>Go Back</Link>*/}
                         </div>
             </Dashboard>
          );

@@ -83,7 +83,7 @@ class SelectMediaHouses extends Component {
                     </ul>   
                     <br />
                     <button onClick={this.props.history.goBack} className="btn abtn abtn-2">&laquo; Go Back</button>
-                    <br />
+                    <br /> 
                 </div>
            </Dashboard>     
          );

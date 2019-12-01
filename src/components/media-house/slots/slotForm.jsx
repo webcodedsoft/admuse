@@ -8,7 +8,7 @@ import { getTypes,createSlot,mapProgramAttributToSelect } from '../../../service
 import Dashboard from './../../common/dashboard';
 import { uploadProgramImages, getSizes } from './../../../services/mediaHouseService';
 import ReactFileReader from 'react-file-reader';
-
+//import Dropzone from 'react-dropzone'
 
 class SlotForm extends Form {
     state = { 
@@ -61,6 +61,7 @@ class SlotForm extends Form {
         }
         
     }
+
     handleUpload = async files => {
         const selectedFiles = files;
         const len = selectedFiles.length;
@@ -101,6 +102,9 @@ class SlotForm extends Form {
         e.preventDefault();
     }
     render() { 
+        
+
+
         return ( 
             <Dashboard>
                 <div className="white-bg">
@@ -138,6 +142,9 @@ class SlotForm extends Form {
                                             </div>
                                             <div className="col-sm-6">
                                                 <label htmlFor="images">Attach Images</label>
+                                               
+                                     
+                                                
                                                 <ReactFileReader handleFiles={this.handleUpload} multipleFiles={true} fileTypes={'image/*'}>
                                                     <button onClick={this.handleButtonClick} className="btn abtn abtn-2"><i className="fas fa-image"></i>&nbsp; Select Images</button>
                                                 </ReactFileReader>
