@@ -140,14 +140,27 @@ class SlotForm extends Form {
                                             <div className="col-sm-3">
                                                 {this.renderSelect('size_id', 'Slot Size Metric',this.state.sizes)}
                                             </div>
-                                            <div className="col-sm-6">
+                                            <div className="col-lg-12">
                                                 <label htmlFor="images">Attach Images</label>
-                                               
-                                     
-                                                
-                                                <ReactFileReader handleFiles={this.handleUpload} multipleFiles={true} fileTypes={'image/*'}>
-                                                    <button onClick={this.handleButtonClick} className="btn abtn abtn-2"><i className="fas fa-image"></i>&nbsp; Select Images</button>
-                                                </ReactFileReader>
+
+                                                <div className="row col-sm-12">
+                                                        <div className="offset-0 col-sm-2" >
+                                                            <ReactFileReader handleFiles={this.handleUpload} fileTypes={'image/*'}>
+                                                                <button onClick={this.handleButtonClick} className="btn abtn abtn-2"><i className="fas fa-image"></i>&nbsp; Select Images</button>
+                                                            </ReactFileReader>
+                                                        </div>
+                                                            <div className="offset-0 col-sm-2" >
+                                                            <ReactFileReader handleFiles={this.handleUpload} fileTypes={'image/*'}>
+                                                                <button onClick={this.handleButtonClick} className="btn abtn abtn-2"><i className="fas fa-image"></i>&nbsp; Select Images</button>
+                                                            </ReactFileReader>
+                                                        </div>
+                                                            
+                                                            <div className="offset-0 col-sm-2" >
+                                                            <ReactFileReader handleFiles={this.handleUpload} fileTypes={'image/*'}>
+                                                                <button onClick={this.handleButtonClick} className="btn abtn abtn-2"><i className="fas fa-image"></i>&nbsp; Select Images</button>
+                                                            </ReactFileReader>
+                                                        </div>
+                                                </div>
                                                 {this.state.imagesName}
                                             </div>
                                             <div className="col-sm-12">
